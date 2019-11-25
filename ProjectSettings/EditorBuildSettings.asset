@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ARgathering.unity
     guid: ae6134ab170cccd448c43a8ac32f0fde
+  - enabled: 1
+    path: Assets/Scenes/ARattacking.unity
+    guid: dc231783be86fd64d8ab2cee07ce85f1
   m_configObjects: {}

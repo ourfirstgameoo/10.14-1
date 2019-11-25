@@ -37,6 +37,13 @@ public class MainPanel : BasePanel
         SceneManager.LoadScene("ARgathering");
     }
 
+
+    //TODO: ugly
+    public void OnChangeAttackCamera()
+    {
+        SceneManager.LoadScene("ARattacking");
+    }
+
     public void ShowCollegeInfo()
     {
         UIMng.Instance.PushPanel(UIPanelType.CollegePanel, PlayerInfo.Instance.save.college);

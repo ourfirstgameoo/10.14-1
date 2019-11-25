@@ -48,16 +48,24 @@ public class PlayerCtrlLess : MonoBehaviour
 
         noLocationService();
 
+        checkHitBuilding();
 
-        if (Input.GetMouseButtonDown(0))
+    }
+
+    private void checkHitBuilding()
+    {
+        if ( Input.touchCount == 1 &&Input.GetTouch(0).phase == TouchPhase.Began)
         {
             RaycastHit hit;
             LayerMask mask = 1 << 10;//building layer
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-            if (Physics.Raycast(ray, out hit,mask))
+            if (Physics.Raycast(ray, out hit, mask))
             {
-                //Debug.Log("hit!!"+hit.transform.GetComponent<Building>().attr.name);
+                Debug.Log("hit!!"+hit.transform.GetComponent<Building>().attr.name);
+
+                AttackMng.Instance.setCurrentBuilding(hit.transform.gameObject);
+                //AttackMng.Instance.openCanvas(1);
                 //Debug.Log(hit.transform.tag);
             }
         }
@@ -87,7 +95,7 @@ public class PlayerCtrlLess : MonoBehaviour
         {
             text.text = build.attr.name;
             switch (build.attr.region) {
-                case BuildingAttr.RegionType.Campus:
+                case BuildingAttr.RegionType.EMPTY:
                     ItemMng.Instance.changeCurrent("red");
                     break;
                 case BuildingAttr.RegionType.CC:

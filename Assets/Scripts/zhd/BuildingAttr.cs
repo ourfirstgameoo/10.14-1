@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BuildingAttr
 {
-    public enum RegionType { Campus, UC, NA, SHAW, WYS, WS, CWC, MC, SHHO, CC };
+    public enum RegionType { EMPTY, UC, NA, SHAW, WYS, WS, CWC, MC, SHHO, CC };
     public enum BuildingType {uniBuilding,dorBuilding,others };
     public RegionType region;
     public BuildingType buildingType;
@@ -19,6 +19,12 @@ public class BuildingAttr
 
     public void setRegion(string regionName)
     {
+        if(buildingType != BuildingType.dorBuilding)
+        {
+            region = RegionType.EMPTY;
+            return;
+        }
+            
         switch (regionName)
         {
             case "Chung Chi College":
@@ -50,7 +56,7 @@ public class BuildingAttr
                 break;
             case "Main Campus":
             case "Campus":
-                region = RegionType.Campus;
+                region = RegionType.EMPTY;
                 break;
         }
     }

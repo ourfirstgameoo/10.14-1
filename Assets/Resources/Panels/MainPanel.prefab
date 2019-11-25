@@ -2040,7 +2040,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7217751477241963116}
-        m_MethodName: Attack
+        m_MethodName: OnChangeAttackCamera
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

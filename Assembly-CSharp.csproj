@@ -62,10 +62,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Managers\AttackMng.cs" />
     <Compile Include="Assets\Scripts\Managers\ChooseMng.cs" />
     <Compile Include="Assets\Scripts\Managers\CsvMng.cs" />
     <Compile Include="Assets\Scripts\Managers\GameMng.cs" />
     <Compile Include="Assets\Scripts\Managers\ItemMng.cs" />
+    <Compile Include="Assets\Scripts\Managers\Shop.cs" />
     <Compile Include="Assets\Scripts\Managers\StartMng.cs" />
     <Compile Include="Assets\Scripts\MapLoad.cs" />
     <Compile Include="Assets\Scripts\MyTrackableEventHandler.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="Assets\Scripts\UI\ShowInfo.cs" />
     <Compile Include="Assets\Scripts\UI\UIMng.cs" />
     <Compile Include="Assets\Scripts\UI\UIType.cs" />
+    <Compile Include="Assets\Scripts\zhd\arAttack.cs" />
+    <Compile Include="Assets\Scripts\zhd\arAttackDisplay.cs" />
     <Compile Include="Assets\Scripts\zhd\arcameraMng.cs" />
     <Compile Include="Assets\Scripts\zhd\Ball.cs" />
     <Compile Include="Assets\Scripts\zhd\Building.cs" />
@@ -119,7 +123,6 @@
     <Compile Include="Assets\Scripts\zhd\Serialization\OsmBuilding.cs" />
     <Compile Include="Assets\Scripts\zhd\Serialization\OsmNode.cs" />
     <Compile Include="Assets\Scripts\zhd\Serialization\OsmWay.cs" />
-    <Compile Include="Assets\Scripts\zhd\Shop.cs" />
     <Compile Include="Assets\Scripts\zhd\ShopSlot.cs" />
     <Compile Include="Assets\Scripts\zhd\ShopUI.cs" />
     <None Include="Assets\StreamingAssets\Vuforia\College.xml" />

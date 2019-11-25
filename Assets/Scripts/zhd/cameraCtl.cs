@@ -34,7 +34,8 @@ public class cameraCtl : MonoBehaviour
         transform.SetParent(cameraParent.transform);
         gyroEnabled = EnableGyro();
 
-        _cameraOffset = new Vector3(0, 3.0f,-10.0f);
+        _cameraOffset = new Vector3(0, 15.0f,-10.0f);
+        transform.position = cameraParent.transform.position + _cameraOffset;
         
     }
 
@@ -164,10 +165,10 @@ public class cameraCtl : MonoBehaviour
                 oldPosition1 = tempPosition1;
                 oldPosition2 = tempPosition2;
             }
-
-            Vector3 newPos = PlayerTransform.position + _cameraOffset + new Vector3(0, distance, -distance);
+            Quaternion originrot = transform.rotation;
+            Vector3 newPos = cameraParent.transform.position + _cameraOffset + new Vector3(0, distance, -distance);
             transform.position = Vector3.Slerp(transform.position, newPos, smoothFactor);
-            
+            transform.rotation = originrot;
         }
 
         else if(Input.touchCount == 1)

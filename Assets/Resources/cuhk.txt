@@ -18126,7 +18126,7 @@
   <nd ref="2050489716"/>
   <nd ref="2050489719"/>
   <nd ref="2050489720"/>
-  <tag k="building" v="university"/>
+  <tag k="building" v="dormitory"/>
   <tag k="building:levels" v="7"/>
   <tag k="name" v="敬文書院 C. W. Chu College"/>
   <tag k="name:en" v="C. W. Chu College"/>
@@ -18173,7 +18173,7 @@
   <nd ref="5266016552"/>
   <nd ref="2050489731"/>
   <nd ref="2050489725"/>
-  <tag k="building" v="yes"/>
+  <tag k="building" v="dormitory"/>
   <tag k="name" v="伍宜孫書院 Wu Yee Sun College"/>
   <tag k="name:en" v="Wu Yee Sun College"/>
   <tag k="name:zh" v="伍宜孫書院"/>
